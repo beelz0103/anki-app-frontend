@@ -64,16 +64,9 @@ const UpdateNote = () => {
     const updateNote = await fetch("http://localhost:8765", {
       method: "POST",
       body: JSON.stringify({
-        action: "updateNoteFields",
+        action: "getNoteInfo",
         version: 6,
-        params: {
-          note: {
-            id: 1685165198961,
-            fields: {
-              Sentence: "",
-            },
-          },
-        },
+        params: {},
       }),
       mode: "cors",
       headers: {
